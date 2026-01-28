@@ -1,27 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Habits</title>
-    </head>
-    <body>
-        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>habits</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <main id="theme">
+        <!-- ---------- SECTION NAVBAR ---------- -->
+        <section class="navbar-habits">
+            <article class="img_task">
+                <img src="./assets/Black notes icon.png" alt="">
+                <p>HabitFlow</p>
+            </article>
+            <article class="user_task">
+                <h1 id="welcomeText"></h1>
+                <button id="logoutBtn">Cerrar sesión</button>
+             </article>
+        </section>
+
+        <!-- ---------- SECTION HABITS ---------- -->
+         <section class="task-principal_container">
+
+        <!-- CONTAINER ONE -->
+            <section class="create-task_container">
+                <form id="habitsForm" class="habits_form">
+                    <!-- <div class="form-check form-switch switch"> -->
+                        <h2>ENTER HABITS</h2>
+                        <!-- <input class="form-check-input" type="checkbox" id="flexSwitch">
+                    </div> -->
+
+                        <label for="">Habit Title</label><br>
+                        <input type="text" id="inputTaskTitle" name="" required><br><br>
+
+                        <label for="">Frequency</label><br>
+                        <select name="" id="frequency">
+                            <option value="diary"></option>
+                            <option value="diary">Diary</option>
+                            <option value="weekly">Weekly</option>
+                        </select>
+
+                        <label for="">Priority</label><br>
+                        <select name="" id="priority">
+                            <option value="low"></option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+
+                        <label for="">Status</label><br>
+                        <select name="" id="status" disabled>
+                            <option value="Pending">Pending</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+
+                        <div class="btn-container">
+                            <button type="submit" id="btn-create" class="btn-create">Create Habit</button>
+                            <p class="task_created" id="task_created"></p>
+                        </div>
+                    </form>
+            </section>
 
 
+            <!-- CONTAINER TWO -->
+            <section class="task-display_container">
+                <article class="cards-container">
+                    <picture>
+                        <h2>titulo de la card</h2>
+                        <p>frecuencia</p>
+                        <p>prioridad</p>
+                        <p>estado</p>
+                        <div class="btn_picture">
+                            <button class="btn-delete">Eliminar</button>
+                            <button class="btn-edit">Editar</button>
+                        </div>
+                    </picture>  
+                    <picture>
+                        <h2>titulo de la card</h2>
+                        <p>frecuencia</p>
+                        <p>prioridad</p>
+                        <p>estado</p>
+                        <div class="btn_picture">
+                            <button class="btn-delete">Eliminar</button>
+                            <button class="btn-edit">Editar</button>
+                        </div>
+                    </picture>        
+                </article>
+            </section>
+
+            <!-- CONTAINER THREE -->
+            <section class="filter-container">
+                <article class="filter-status">
+                    <h2>STATUS</h2>
+                    <div>
+                        <button data-status="Pending">Pending</button>
+                        <button data-status="In Progress">In Progress</button>
+                        <button data-status="Completed">Completed</button>
+                        <button data-status="all">All</button>
+                    </div>
+                </article>
+            </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-    <script type="module" src="./JS/auth.js"></script>
-    </body>
+        </section>
+        <section class="footer">
+            <p>CRUDZASO · HabitFlow</p>
+        </section>
+    </main>
+    <script type="module" src="JS/auth.js"></script>
+    <script type="module" src="JS/habits.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
 </html>
+
